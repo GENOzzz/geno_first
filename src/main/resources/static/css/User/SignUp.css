@@ -1,0 +1,14 @@
+#id_success{
+    color : green;
+    display: none;
+}
+
+#id_overlap{
+    color : red;
+    display: none;
+}
+
+#id_min{
+    color : red;
+    display: none;
+}

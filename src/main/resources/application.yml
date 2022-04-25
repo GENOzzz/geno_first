@@ -1,4 +1,4 @@
-Bserver:
+server:
   port: 5555
 
 spring:

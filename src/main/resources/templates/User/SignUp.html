@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/User/SignUp.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/js/User/SignUp.js"></script>
     <title>회원가입 페이지</title>
 </head>
 <body>
-회원가입 페이지 입니다.
+    <p><input type="text" id="id" placeholder="ID" oninput="id_check()"></p>
+    <p id="id_min">아이디는 최소 2자 이상입니다.</p>
+    <p id="id_overlap">중복된 아이디 입니다.</p>
+    <p id="id_success">가입가능한 아이디입니다.</p>
+    <p><input type="password" id="pw1"></p>
+    <p><input type="password" id="pw2"></p>
 </body>
 </html>
