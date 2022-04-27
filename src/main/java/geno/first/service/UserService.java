@@ -19,8 +19,11 @@ public class UserService {
         if(id.length()<2){
             return 0;
         }
+        if(id.indexOf(" ")!=-1){//indexOf()로 값이 없으면 -1을 return 하는 것을 이용
+            return 3;
+        }
         User oldUser=userRepository.getById(id);
-        if(oldUser!=null){
+        if(oldUser!=null) {
             return 2;
         }
         return 1;

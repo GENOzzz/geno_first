@@ -10,14 +10,22 @@ function id_check(){
                     $('#id_success').css("display","inline-block")
                     $('#id_overlap').css("display","none")
                     $('#id_min').css("display","none")
+                    $('#id_blank').css("display","none")
                 }else if(data==0){
                     $('#id_success').css("display","none")
                     $('#id_overlap').css("display","none")
                     $('#id_min').css("display","inline-block")
+                    $('#id_blank').css("display","none")
                 }else if(data==2){
                     $('#id_success').css("display","none")
                     $('#id_overlap').css("display","inline-block")
                     $('#id_min').css("display","none")
+                    $('#id_blank').css("display","none")
+                }else if(data==3){
+                    $('#id_success').css("display","none")
+                    $('#id_overlap').css("display","none")
+                    $('#id_min').css("display","none")
+                    $('#id_blank').css("display","inline-block")
                 }
             }
         })
