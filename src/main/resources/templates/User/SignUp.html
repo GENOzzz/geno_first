@@ -13,7 +13,11 @@
     <p id="id_overlap">중복된 아이디 입니다.</p>
     <p id="id_blank">아이디에 공백은 포함될 수 없습니다.</p>
     <p id="id_success">가입가능한 아이디입니다.</p>
-    <p><input type="password" id="pw1"></p>
-    <p><input type="password" id="pw2"></p>
+    <p><input type="password" id="pw1" placeholder="PASSWORD"></p>
+    <p><input type="password" id="pw2" placeholder="PASSWORD CHECK" oninput="pw_check()"></p>
+    <p id="pw_fail">비밀번호가 일치하지 않습니다.</p>
+    <p id="pw_success">비밀번호 일치.</p>
+    <p><input type="text" id="name" placeholder="Name" oninput="name_check()"></p>
+    <p id="name_fail">이름의 형식이 올바르지 않습니다.</p>
 </body>
 </html>
