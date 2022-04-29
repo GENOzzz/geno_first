@@ -69,3 +69,17 @@ function name_check(){
         $('#name_fail').css("display","none")
     }
 }
+
+function phone_check(){
+    var phone=$('#phone').val();
+    var phone_pattern=/^(010)\d{7,8}$/;
+    if(phone!=""){
+        if(phone_pattern.test(phone)){
+            $('#phone_fail').css("display","none")
+        }else{
+            $('#phone_fail').css("display","inline-block")
+        }
+    }else{
+        $('#phone_fail').css("display","none")
+    }
+}
