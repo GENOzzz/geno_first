@@ -19,7 +19,10 @@
     <p id="pw_success">비밀번호 일치.</p>
     <p><input type="text" id="name" placeholder="Name" oninput="name_check()"></p>
     <p id="name_fail">이름의 형식이 올바르지 않습니다.</p>
-    <p><input type="test" id="phone" placeholder="PHONE" oninput="phone_check()"></p>
+    <p><input type="test" id="phone" placeholder="PHONE(숫자만 입력해 주십시오.)" oninput="phone_check()"></p>
     <p id="phone_fail">전화번호의 형식이 올바르지 않습니다.</p>
+    <p>
+        <input type="text" disabled="disabled" placeholder="주소를 검색해 주십시오"><button type="button" onclick="window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');">주소 검색하기</button>
+    </p>
 </body>
 </html>

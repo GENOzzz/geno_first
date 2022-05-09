@@ -28,4 +28,7 @@ public class UserController {
     public int checkID(String id){
         return userService.checkID(id);
     }
+
+    @GetMapping("/address")
+    public String address(){return "User/Address/addressPopUp";}
 }
