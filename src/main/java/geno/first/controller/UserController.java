@@ -18,7 +18,7 @@ public class UserController {
     UserService userService;
 
     //회원가입 페이지
-    @GetMapping("/sign")
+    @GetMapping("/")
     public String signUp(){
         return "User/SignUp";
     }
@@ -29,6 +29,5 @@ public class UserController {
         return userService.checkID(id);
     }
 
-    @GetMapping("/address")
-    public String address(){return "User/Address/addressPopUp";}
+
 }

@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/User/SignUp.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="/js/User/SignUp.js"></script>
+    <script>
+        window.onload = function(){
+            document.getElementById("address").addEventListener("click", function(){ //주소입력칸을 클릭하면
+<!--                카카오 지도 발생-->
+                new daum.Postcode({
+                    oncomplete: function(data) { //선택시 입력값 세팅
+                        document.getElementById("address").value = data.address; // 주소 넣기
+<!--                        document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱-->
+                    }
+                }).open();
+            });
+        }
+    </script>
     <title>회원가입 페이지</title>
 </head>
 <body>
@@ -21,8 +35,6 @@
     <p id="name_fail">이름의 형식이 올바르지 않습니다.</p>
     <p><input type="test" id="phone" placeholder="PHONE(숫자만 입력해 주십시오.)" oninput="phone_check()"></p>
     <p id="phone_fail">전화번호의 형식이 올바르지 않습니다.</p>
-    <p>
-        <input type="text" disabled="disabled" placeholder="주소를 검색해 주십시오"><button type="button" onclick="window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');">주소 검색하기</button>
-    </p>
+    <p><input type="text" id="address" placeholder="주소를 검색해 주십시오."></p>
 </body>
 </html>
