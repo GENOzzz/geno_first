@@ -95,3 +95,15 @@ function phone_check(){
         $('#phone_fail').css("display","none")
     }
 }
+
+function email_check(){
+    var email=$('#email').val();
+    var email_pattern=/^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if(email!=""){
+        if(email_pattern.test(email)){
+            $('#email_fail').css("display","none")
+        }else{
+            $('#email_fail').css("display","inline-block")
+        }
+    }
+}

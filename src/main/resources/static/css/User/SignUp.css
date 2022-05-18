@@ -37,3 +37,8 @@
     color : red;
     display: none;
 }
+
+#email_fail{
+    color : red;
+    display: none;
+}

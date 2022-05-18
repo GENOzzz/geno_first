@@ -24,7 +24,7 @@ public class User {
     private String phone;
     private String address;
     private String email;
-    private String auth;//권환(member,ceo,admin)
+    private String auth;//권한(member,ceo,admin)
 
     @Override
     public String toString(){

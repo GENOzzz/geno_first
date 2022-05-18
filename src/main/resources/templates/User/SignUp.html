@@ -17,6 +17,15 @@
                     }
                 }).open();
             });
+            document.getElementById("address_search").addEventListener("click", function(){ //주소입력칸을 클릭하면
+<!--                카카오 지도 발생-->
+                new daum.Postcode({
+                    oncomplete: function(data) { //선택시 입력값 세팅
+                        document.getElementById("address").value = data.address; // 주소 넣기
+<!--                        document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱-->
+                    }
+                }).open();
+            });
         }
     </script>
     <title>회원가입 페이지</title>
@@ -33,8 +42,10 @@
     <p id="pw_success">비밀번호 일치.</p>
     <p><input type="text" id="name" placeholder="Name" oninput="name_check()"></p>
     <p id="name_fail">이름의 형식이 올바르지 않습니다.</p>
-    <p><input type="test" id="phone" placeholder="PHONE(숫자만 입력해 주십시오.)" oninput="phone_check()"></p>
+    <p><input type="text" id="phone" placeholder="PHONE(숫자만 입력해 주십시오.)" oninput="phone_check()"></p>
     <p id="phone_fail">전화번호의 형식이 올바르지 않습니다.</p>
-    <p><input type="text" id="address" placeholder="주소를 검색해 주십시오."></p>
+    <p><input type="text" id="address" placeholder="주소를 검색해 주십시오."><input type="button" id="address_search" value="검색"></p>
+    <p><input type="text" id="email" placeholder="EMAIL" oninput="email_check()"> </p>
+    <p id="email_fail">Email의 형식이 올바르지 않습니다.</p>
 </body>
 </html>
